@@ -1,0 +1,17 @@
+package "msyspath.exe"
+version "1.0.0"
+purpose "Simple implementation of some of the functionality of cygpath for msys.\nConvert Unix and Windows format paths."
+usage   "msyspath.exe (-m|-u|-w) [-f FILE] [OPTIONS]  path"
+args "--file-name=cmdargs -G -u"
+
+defgroup "Output type options" required
+groupoption	"windows"	w	"print Windows form of NAMEs (C:\\WINNT)" group="Output type options"
+groupoption	"mixed"		m	"like --windows, but with regular slashes (C:/WINNT)" group="Output type options"
+groupoption	"unix"		u	"print Unix form of NAMEs (/cygdrive/c/winnt)" group="Output type options"
+
+section " Path conversion options"
+option	"absolute"	a	"output absolute path" optional
+option	"path"		p	"NAME is a PATH list (i.e., '/bin:/usr/bin')" optional
+
+section " Other options"
+option "file"	f	"read FILE for input; use - to read from STDIN" optional

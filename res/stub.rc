@@ -1,0 +1,31 @@
+#include <windows.h>
+#include <commctrl.h>
+#include <richedit.h>
+#include "resource.h"
+/* 
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS */
+
+#ifndef NO_COMPRESSION
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+IDR_DEFAULT_EXEC   EXEC           "stub.bat.bin"
+#else
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+IDR_DEFAULT_EXEC   EXEC           "stub.bat"
+#endif
+
+#ifndef EXEC_LOCAL
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+IDR_EXECLOCAL_FLAG FLAGS          "nolocal.flag"
+#else
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+IDR_EXECLOCAL_FLAG FLAGS          "local.flag"
+#endif
+
+
+//
+// Icon resources
+//
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+IDI_APPICON          ICON           "stub.ico"
