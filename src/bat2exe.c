@@ -49,7 +49,7 @@ static bool end_update(HANDLE hExe, char* inexe)
 
 static bool change_exec_location(HANDLE hExe, char* inexe, int exec_type)
 {
-	const char* exec_flag = exec_type ? "1" : "0";
+	const char* exec_flag = exec_type ? "0" : "1";
 	if(!UpdateResource(hExe, "FLAGS", MAKEINTRESOURCE(IDR_EXECLOCAL_FLAG), MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US), (LPVOID)exec_flag, (DWORD)sizeof(char) * 2)) {
 		error("Could not update resource in %s.", inexe);
 		return false;
