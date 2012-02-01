@@ -188,7 +188,7 @@ int main(int argc, char* argv[])
 		}
 	}
 	
-	hExe = BeginUpdateResource(inexe, FALSE);
+	hExe = BeginUpdateResource(inexe, TRUE);
 	if(hExe == NULL) {
 		fatal("Could not open %s for updating.", inexe);
 	}
